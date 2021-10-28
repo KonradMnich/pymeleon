@@ -3,12 +3,12 @@ from datetime import datetime
 import matplotlib.pyplot as plt
 
 
-def store_figure(figure, path=None):
+def store_figure(fig, path=None):
     """Saves figure to file for later usage.
 
     Parameters
     ----------
-    figure : matplotlib.figure.Figure
+    fig : matplotlib.figure.Figure
         Figure to be stored.
     path : path-like, optional
         Path under which the figure should be saved.
@@ -16,7 +16,7 @@ def store_figure(figure, path=None):
     if path is None:
         path = f"Figure_{datetime.utcnow()}"
     with open(path, "wb") as f:
-        pickle.dump(figure, f)
+        pickle.dump(fig, f)
 
 
 def restore_visualization(fig):
@@ -27,6 +27,10 @@ def restore_visualization(fig):
     ----------
     fig : matplotlib.figure.Figure
         Figure to be treated.
+
+    Return
+    ------
+    fig
     """
     dummy = plt.figure()
     new_manager = dummy.canvas.manager
