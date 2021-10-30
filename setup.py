@@ -12,15 +12,11 @@ setuptools.setup(
     long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/KonradMnich/pymeleon",
-    project_urls={
-        "Bug Tracker": "https://github.com/KonradMnich/pymeleon/issues",
-    },
     classifiers=[
         "Programming Language :: Python :: 3",
         "License :: OSI Approved :: MIT License",
         "Operating System :: OS Independent",
     ],
-    #package_dir={"": "src"},
-    #packages=setuptools.find_packages(where="src"),
+    packages=["pymeleon"],
     python_requires=">=3.6",
 )
