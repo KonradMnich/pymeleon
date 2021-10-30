@@ -1,5 +1,5 @@
 """This module demonstrates how to get the tabular data from a figure."""
-from graph_scraping import scrap_data
+from pymeleon.graph_scraping import scrap_data
 import matplotlib.pyplot as plt
 
 

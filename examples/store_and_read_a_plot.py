@@ -2,7 +2,7 @@
 and how to read it back to the program.
 """
 import matplotlib.pyplot as plt
-from figure_storage import store_figure, read_figure
+from pymeleon.figure_storage import store_figure, read_figure
 
 
 if __name__ == "__main__":

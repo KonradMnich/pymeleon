@@ -1,5 +1,5 @@
 """Change font properties of the elements of axis."""
-from font_modifiers import modify_font
+from pymeleon.font_modifiers import modify_font
 import matplotlib.pyplot as plt
 
 
