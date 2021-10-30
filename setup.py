@@ -5,7 +5,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setuptools.setup(
     name="pymeleon",
-    version="0.0.2",
+    version="0.0.3",
     author="Konrad Mnich",
     author_email="konrad.mnich@gmail.com",
     description="A simple package to modify matplotlib graphs",
