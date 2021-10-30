@@ -3,7 +3,7 @@ objects of the figure.
 """
 
 
-def modify_font(ax, location, feature):
+def modify_font(ax, location, feature_name, feature_value):
     """Change the text properties of the indicated graph element.
 
     Properties
@@ -13,12 +13,10 @@ def modify_font(ax, location, feature):
     location : str
         One of the following ["title", "xlabel", "ylabel", "xticks", "yticks",
         legend"]
-    feature : dict
-        Tells the function which feature to modify and how; ex:
-        {"name": "color", "value": "red"}.
-        List of supported properties: ["color", "alpha", "size", "family",
-        "slant"] (but you can figure out what else is possible by looking at
-        the source code.
+    feature_name : str
+        Supported features: "color", "alpha", "size", "family", "slant"
+    feature_value : str or float
+        New value for the changed feature
 
     Returns
     -------
@@ -44,9 +42,9 @@ def modify_font(ax, location, feature):
         raise ValueError("Location not suported.")
 
     for text in my_texts:
-        if feature["name"] in ["color", "alpha"]:
-            setattr(text, f"_{feature['name']}", feature['value'])
+        if feature_name in ["color", "alpha"]:
+            setattr(text, f"_{feature_name}", feature_value)
         else:
-            setattr(text._fontproperties, f"_{feature['name']}", feature['value'])
+            setattr(text._fontproperties, f"_{feature_name}", feature_value)
 
     return ax
